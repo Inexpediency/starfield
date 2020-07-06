@@ -1,14 +1,17 @@
 ﻿using System;
+using System.Drawing;
 
 namespace Starfield
 {
-    class Controller
+    public class Controller
     {
         private Star[] stars;
-        private Random random = new Random();
+        public Random random = new Random();
         
         public void InitStars(int count, int fieldWidth, int fieldHeight)
         {
+            stars = new Star[count];
+
             for (int i = 0; i < count; i++)
             {
                 stars[i] = new Star()
@@ -20,9 +23,13 @@ namespace Starfield
             }
         }
 
-        public float ChangeCoordinateSystem(float n, float start1, float stop1, float start2, float stop2)
+        public void RefreshField(Graphics graphics, int fieldWidth, int fieldHeight)
         {
-            return ((n - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
+            foreach (var star in stars)
+            {
+                star.Draw(graphics, fieldWidth, fieldHeight);
+                star.Move(random, fieldWidth, fieldHeight);
+            }
         }
     }
 }

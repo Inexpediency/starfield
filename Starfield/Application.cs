@@ -31,7 +31,13 @@ namespace Starfield
 
         private void eventLoop_Tick(object sender, EventArgs e)
         {
+            graphics.Clear(Color.Black);
 
+            var fieldWidth = content.Width;
+            var fieldHeight = content.Height;
+            controller.RefreshField(graphics, fieldWidth, fieldHeight);
+
+            content.Refresh();
         }
     }
 }
