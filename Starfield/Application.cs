@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Starfield
 {
-    public partial class Form1 : Form
+    public partial class Application : Form
     {
-        public Form1()
+        public Application()
         {
             InitializeComponent();
+        }
+
+        private void eventLoop_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }
