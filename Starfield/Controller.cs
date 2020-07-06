@@ -14,7 +14,7 @@ namespace Starfield
 
             for (int i = 0; i < count; i++)
             {
-                stars[i] = new Star()
+                stars[i] = new Star(random)
                 {
                     X = random.Next(-fieldWidth, fieldWidth),
                     Y = random.Next(-fieldHeight, fieldHeight),

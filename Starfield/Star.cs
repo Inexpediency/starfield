@@ -13,9 +13,21 @@ namespace Starfield
         public float Y { get; set; }
         public float Z { get; set; }
 
+        private int Speed;
+        private const int MINSPEED = 15;
+        private const int MAXSPEED = 30;
+
+        private const int MINSIZE = 1;
+        private const int MAXSIZE = 9;
+
+        public Star(Random random)
+        {
+            this.Speed = random.Next(MINSPEED, MAXSPEED);
+        }
+
         public void Draw(Graphics graphics, int fieldWidth, int fieldHeight)
         {
-            float starSize = 7;
+            float starSize = ChangeCoordinateSystem(this.Z, 0, fieldWidth, MAXSIZE, MINSIZE);
 
             float x = ChangeCoordinateSystem(this.X / this.Z, 0, 1, 0, fieldWidth) + fieldWidth / 2;
             float y = ChangeCoordinateSystem(this.Y / this.Z, 0, 1, 0, fieldHeight) + fieldHeight / 2;
@@ -25,9 +37,11 @@ namespace Starfield
 
         public void Move(Random random, int fieldWidth, int fieldHeight)
         {
-            this.Z -= 30;
+            this.Z -= this.Speed;
             if (this.Z < 1)
             {
+                this.X = random.Next(-fieldWidth, fieldWidth);
+                this.Y = random.Next(-fieldHeight, fieldHeight);
                 this.Z = random.Next(1, fieldWidth);
             }
         }
