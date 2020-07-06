@@ -17,6 +17,11 @@ namespace Starfield
             InitializeComponent();
         }
 
+        private void Application_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void eventLoop_Tick(object sender, EventArgs e)
         {
 

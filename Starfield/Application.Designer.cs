@@ -58,6 +58,7 @@
             this.Name = "Application";
             this.Text = "Starfield";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Application_Load);
             ((System.ComponentModel.ISupportInitialize)(this.content)).EndInit();
             this.ResumeLayout(false);
 
