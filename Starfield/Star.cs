@@ -12,4 +12,6 @@ namespace Starfield
         public float Y { get; set; }
         public float Z { get; set; }
     }
+
+    
 }
