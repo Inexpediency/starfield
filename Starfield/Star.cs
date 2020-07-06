@@ -14,11 +14,11 @@ namespace Starfield
         public float Z { get; set; }
 
         private int Speed;
-        private const int MINSPEED = 15;
+        private const int MINSPEED = 10;
         private const int MAXSPEED = 30;
 
         private const int MINSIZE = 1;
-        private const int MAXSIZE = 9;
+        private const int MAXSIZE = 10;
 
         public Star(Random random)
         {

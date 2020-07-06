@@ -10,6 +10,8 @@ namespace Starfield
         private Controller controller;
         private int STARSCOUNT = 15000;
 
+        private int fieldWidth, fieldHeight;
+
         public Application()
         {
             InitializeComponent();
@@ -17,8 +19,8 @@ namespace Starfield
 
         private void Application_Load(object sender, EventArgs e)
         {
-            var fieldWidth = content.Width;
-            var fieldHeight = content.Height;
+            fieldWidth = content.Width;
+            fieldHeight = content.Height;
 
             content.Image = new Bitmap(fieldWidth, fieldHeight);
             graphics = Graphics.FromImage(content.Image);
@@ -33,8 +35,6 @@ namespace Starfield
         {
             graphics.Clear(Color.Black);
 
-            var fieldWidth = content.Width;
-            var fieldHeight = content.Height;
             controller.RefreshField(graphics, fieldWidth, fieldHeight);
 
             content.Refresh();
