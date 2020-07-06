@@ -14,12 +14,8 @@ namespace Starfield
 
             for (int i = 0; i < count; i++)
             {
-                stars[i] = new Star(random)
-                {
-                    X = random.Next(-fieldWidth, fieldWidth),
-                    Y = random.Next(-fieldHeight, fieldHeight),
-                    Z = random.Next(1, fieldWidth),
-                };
+                stars[i] = new Star(random);
+                stars[i].UpdateCoordinations(random, fieldWidth, fieldHeight);
             }
         }
 

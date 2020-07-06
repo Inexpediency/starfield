@@ -12,10 +12,7 @@ namespace Starfield
 
         private int fieldWidth, fieldHeight;
 
-        public Application()
-        {
-            InitializeComponent();
-        }
+        public Application() => InitializeComponent();
 
         private void Application_Load(object sender, EventArgs e)
         {

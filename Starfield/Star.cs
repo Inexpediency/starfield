@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Starfield
 {
@@ -40,15 +36,20 @@ namespace Starfield
             this.Z -= this.Speed;
             if (this.Z < 1)
             {
-                this.X = random.Next(-fieldWidth, fieldWidth);
-                this.Y = random.Next(-fieldHeight, fieldHeight);
-                this.Z = random.Next(1, fieldWidth);
+                this.UpdateCoordinations(random, fieldWidth, fieldHeight);
             }
         }
 
         private float ChangeCoordinateSystem(float n, float start1, float stop1, float start2, float stop2)
         {
             return ((n - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
+        }
+
+        public void UpdateCoordinations(Random random, int fieldWidth, int fieldHeight)
+        {
+            this.X = random.Next(-fieldWidth, fieldWidth);
+            this.Y = random.Next(-fieldHeight, fieldHeight);
+            this.Z = random.Next(1, fieldWidth);
         }
     }    
 }
