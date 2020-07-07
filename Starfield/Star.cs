@@ -28,7 +28,7 @@ namespace Starfield
             float x = ChangeCoordinateSystem(this.X / this.Z, 0, 1, 0, fieldWidth) + fieldWidth / 2;
             float y = ChangeCoordinateSystem(this.Y / this.Z, 0, 1, 0, fieldHeight) + fieldHeight / 2;
 
-            graphics.FillEllipse(Brushes.BlueViolet, x, y, starSize, starSize);
+            graphics.FillEllipse(Brushes.AliceBlue, x, y, starSize, starSize);
         }
 
         public void Move(Random random, int fieldWidth, int fieldHeight)

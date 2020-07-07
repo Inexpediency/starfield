@@ -17,7 +17,7 @@
 
 ## How it looks
 <div align="center">
-	<img src="https://github.com/Ythosa/GameOfLife/blob/master/assets/application.jpg" alt="Application screenshot." />
+	<img src="https://github.com/Ythosa/Starfield/blob/master/assets/application.jpg" alt="Application screenshot." />
 </div>
 
 <br>
