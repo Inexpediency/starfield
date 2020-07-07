@@ -21,6 +21,7 @@
 *	Original starfield screensaver: https://www.youtube.com/watch?v=KheYW_G0goY&t
 
 ## How it looks
+PS: This is just screenshot. You can see this as video [here](https://www.youtube.com/watch?v=KheYW_G0goY&t).
 <div align="center">
 	<img src="https://github.com/Ythosa/Starfield/blob/master/assets/application.jpg" alt="Application screenshot." />
 </div>
