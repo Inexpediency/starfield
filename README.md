@@ -13,7 +13,12 @@
 
 ## Description
 *	Starfield Windows Screensaver realisation implemented on C# .NET Framework;
+*	Starfield - retro basic screensaver that exists in the operating system: Windows 3.1 / 95 / 98 / 2000 / XP;
 *	You can clone this repository and run it for example from Visual Studio if you have .NET Framework on your computer. :3
+
+## Links
+*	What is screensaver: https://en.wikipedia.org/wiki/Screensaver 
+*	Original starfield screensaver: https://www.youtube.com/watch?v=KheYW_G0goY&t
 
 ## How it looks
 <div align="center">
